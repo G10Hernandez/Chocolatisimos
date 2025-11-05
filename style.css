@@ -89,7 +89,7 @@ header {
 .carrusel img {
   width: 100%;
   height: auto;
-  max-height: 130px; /* 🔹 Reducido al 50% */
+  max-height: 150px; /* 🔹 Reducido al 50% */
   object-fit: contain;
   border-radius: 10px;
 }
@@ -225,7 +225,6 @@ header {
   border: 1px solid #d7ccc8;
   border-radius: 15px;
   padding: 15px;
-  color: yellow;
   text-align: center;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
@@ -238,8 +237,8 @@ header {
 .producto img {
   width: 100%;
   height: auto;
-  max-height: 140px;
-  object-fit: contain;
+  max-height: 100px;
+  object-fit: scale-down;
   border-radius: 10px;
 }
 
