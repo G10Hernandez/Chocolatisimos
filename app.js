@@ -1,6 +1,6 @@
 let productos = [];
 let carrito = [];
-const telefonoChocolateria = "525512345678"; // <-- tu número de WhatsApp con clave de país (sin + ni espacios)
+const telefonoChocolateria = "525519259552"; // <-- tu número de WhatsApp con clave de país (sin + ni espacios)
 
 // Cargar productos
 fetch("productos.json")
