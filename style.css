@@ -1,4 +1,4 @@
-/* Reset general */
+/* ======== RESET GENERAL ======== */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +9,10 @@ body {
   font-family: "Segoe UI", sans-serif;
   background: #fff8f3;
   color: #3e2723;
+  line-height: 1.4;
 }
 
-/* Encabezado */
+/* ======== ENCABEZADO ======== */
 header {
   background: #5a3e2b;
   color: white;
@@ -20,6 +21,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 4px solid #8b4513;
+  flex-wrap: wrap; /* 🔹 Para que en móvil el logo y el contacto no se encimen */
 }
 
 .logo {
@@ -35,6 +37,7 @@ header {
 .logo h1 {
   color: #fff3e0;
   text-shadow: 1px 1px 2px #3e2723;
+  font-size: 1.5rem;
 }
 
 .contacto {
@@ -56,7 +59,7 @@ header {
   background: #a0522d;
 }
 
-/* Carrusel */
+/* ======== CARRUSEL ======== */
 .carrusel {
   width: 100%;
   overflow: hidden;
@@ -75,7 +78,7 @@ header {
 
 .carrusel img {
   width: 100%;
-  height: auto;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -95,146 +98,14 @@ header {
   }
 }
 
-/* Contenedor carrusel + carrito */
+/* ======== CARRUSEL + CARRITO ======== */
 .contenedor-carrusel {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 15px;
+  gap: 20px;
+  flex-wrap: wrap; /* 🔹 Se adapta en móvil */
 }
 
-.carrusel {
-  flex: 1;
-  margin-right: 20px;
-}
-
-/* Carrito */
-#carrito {
-  background: #fff0e0;
-  border: 2px solid #8b4513;
-  padding: 15px;
-  width: 260px;
-  height: 300px;
-  overflow-y: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 20px;
-}
-
-#carrito h2 {
-  color: #5a3e2b;
-  margin-bottom: 10px;
-}
-
-#carrito button {
-  width: 100%;
-  background: #8b4513;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  margin-top: 8px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-#carrito button:hover {
-  background: #a0522d;
-}
-
-.carrito-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.carrito-item button {
-  background: red;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 3px 7px;
-}
-
-/* Filtros */
-.filtros {
-  padding: 15px;
-  text-align: center;
-}
-
-.filtros input {
-  width: 60%;
-  padding: 8px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-#categorias button {
-  background: #d7ccc8;
-  border: none;
-  margin: 5px;
-  padding: 8px 12px;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#categorias button:hover {
-  background: #8b4513;
-  color: white;
-}
-
-/* Productos */
-#productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-
-.producto {
-  background: white;
-  border: 1px solid #d7ccc8;
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
-.producto:hover {
-  transform: translateY(-5px);
-}
-
-.producto img {
-  max-width: 100%;
-  border-radius: 10px;
-  height: 150px;
-  object-fit: cover;
-}
-
-.producto button {
-  background: #8b4513;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: 0.3s;
-}
-
-.producto button:hover {
-  background: #a0522d;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #5a3e2b;
-  border-top: 4px solid #8b4513;
-  color: white;
-}
+.
