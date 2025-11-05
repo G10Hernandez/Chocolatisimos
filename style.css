@@ -1,4 +1,4 @@
-/* ======== RESET GENERAL ======== */
+/* Reset general */
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +9,9 @@ body {
   font-family: "Segoe UI", sans-serif;
   background: #fff8f3;
   color: #3e2723;
-  line-height: 1.4;
 }
 
-/* ======== ENCABEZADO ======== */
+/* Encabezado */
 header {
   background: #5a3e2b;
   color: white;
@@ -28,6 +27,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .logo img {
@@ -38,8 +38,8 @@ header {
 .logo h1 {
   color: #fff3e0;
   text-shadow: 1px 1px 2px #3e2723;
-  font-size: 1.5rem;
-  white-space: nowrap;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .contacto {
@@ -61,7 +61,7 @@ header {
   background: #a0522d;
 }
 
-/* ======== CARRUSEL ======== */
+/* Carrusel */
 .carrusel {
   width: 100%;
   overflow: hidden;
@@ -80,9 +80,9 @@ header {
 
 .carrusel img {
   width: 100%;
-  height: auto; /* 🔹 Mantiene proporción natural */
+  height: auto;
+  object-fit: cover;
   border-radius: 10px;
-  display: block;
 }
 
 @keyframes slide {
@@ -100,28 +100,28 @@ header {
   }
 }
 
-/* ======== CONTENEDOR CARRUSEL + CARRITO ======== */
+/* Contenedor carrusel + carrito */
 .contenedor-carrusel {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 15px;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .carrusel {
-  flex: 1;
-  min-width: 280px;
+  flex: 1 1 600px;
+  margin-right: 20px;
 }
 
-/* ======== CARRITO ======== */
+/* Carrito */
 #carrito {
   background: #fff0e0;
   border: 2px solid #8b4513;
   padding: 15px;
-  width: 280px;
-  max-width: 100%;
+  width: 260px;
+  height: 300px;
   overflow-y: auto;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -164,5 +164,153 @@ header {
   padding: 3px 7px;
 }
 
-/* ======== FILTROS ======== */
-.fil
+/* Filtros */
+.filtros {
+  padding: 15px;
+  text-align: center;
+}
+
+.filtros input {
+  width: 60%;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  max-width: 400px;
+}
+
+#categorias button {
+  background: #d7ccc8;
+  border: none;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#categorias button:hover {
+  background: #8b4513;
+  color: white;
+}
+
+/* Productos */
+#productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.producto {
+  background: white;
+  border: 1px solid #d7ccc8;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.producto button {
+  background: #8b4513;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.producto button:hover {
+  background: #a0522d;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #5a3e2b;
+  border-top: 4px solid #8b4513;
+  color: white;
+}
+
+/* ===========================
+   🔸 ADAPTACIÓN RESPONSIVE 🔸
+   =========================== */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contacto {
+    text-align: center;
+  }
+
+  .contenedor-carrusel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #carrito {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    top: 0;
+  }
+
+  .carrusel {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  .filtros input {
+    width: 90%;
+  }
+
+  #productos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #carrito {
+    width: 100%;
+  }
+
+  .producto img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  #productos {
+    grid-template-columns: 1fr;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  header {
+    padding: 10px;
+  }
+}
