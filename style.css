@@ -1,4 +1,6 @@
-/* ======== RESET GENERAL ======== */
+/* ===========================
+   RESETEO Y BASE GENERAL
+   =========================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,9 @@ body {
   line-height: 1.4;
 }
 
-/* ======== ENCABEZADO ======== */
+/* ===========================
+   ENCABEZADO
+   =========================== */
 header {
   background: #5a3e2b;
   color: white;
@@ -63,7 +67,9 @@ header {
   background: #a0522d;
 }
 
-/* ======== CARRUSEL ======== */
+/* ===========================
+   CARRUSEL
+   =========================== */
 .carrusel {
   width: 100%;
   overflow: hidden;
@@ -83,8 +89,8 @@ header {
 .carrusel img {
   width: 100%;
   height: auto;
-  max-height: 175x; /* 🔹 Evita imágenes gigantes */
-  object-fit: contain; /* 🔹 Ajusta sin recortar */
+  max-height: 175px; /* 🔹 Reducido al 50% */
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -103,7 +109,9 @@ header {
   }
 }
 
-/* ======== CONTENEDOR CARRUSEL + CARRITO ======== */
+/* ===========================
+   CARRUSEL + CARRITO
+   =========================== */
 .contenedor-carrusel {
   display: flex;
   justify-content: space-between;
@@ -119,7 +127,9 @@ header {
   min-width: 300px;
 }
 
-/* ======== CARRITO ======== */
+/* ===========================
+   CARRITO
+   =========================== */
 #carrito {
   background: #fff0e0;
   border: 2px solid #8b4513;
@@ -168,7 +178,9 @@ header {
   padding: 3px 7px;
 }
 
-/* ======== FILTROS ======== */
+/* ===========================
+   FILTROS
+   =========================== */
 .filtros {
   padding: 15px;
   text-align: center;
@@ -198,7 +210,9 @@ header {
   color: white;
 }
 
-/* ======== PRODUCTOS ======== */
+/* ===========================
+   PRODUCTOS
+   =========================== */
 #productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -223,8 +237,8 @@ header {
 .producto img {
   width: 100%;
   height: auto;
-  max-height: 180px; /* 🔹 controla el alto máximo */
-  object-fit: contain; /* 🔹 no recorta, ajusta al cuadro */
+  max-height: 180px;
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -243,7 +257,9 @@ header {
   background: #a0522d;
 }
 
-/* ======== FOOTER ======== */
+/* ===========================
+   FOOTER
+   =========================== */
 footer {
   text-align: center;
   padding: 15px;
@@ -252,7 +268,9 @@ footer {
   color: white;
 }
 
-/* ======== ADAPTACIÓN RESPONSIVE ======== */
+/* ===========================
+   🔸 RESPONSIVE 🔸
+   =========================== */
 @media (max-width: 1024px) {
   header {
     flex-direction: column;
@@ -277,7 +295,7 @@ footer {
   }
 
   .carrusel img {
-    max-height: 280px;
+    max-height: 140px;
   }
 }
 
@@ -299,7 +317,7 @@ footer {
   }
 
   .carrusel img {
-    max-height: 200px;
+    max-height: 120px;
   }
 
   #carrito {
@@ -321,6 +339,6 @@ footer {
   }
 
   .carrusel img {
-    max-height: 180px;
+    max-height: 100px;
   }
 }
