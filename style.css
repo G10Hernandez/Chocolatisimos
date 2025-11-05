@@ -21,7 +21,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 4px solid #8b4513;
-  flex-wrap: wrap; /* 🔹 Para que en móvil el logo y el contacto no se encimen */
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -32,12 +32,14 @@ header {
 
 .logo img {
   height: 60px;
+  width: auto;
 }
 
 .logo h1 {
   color: #fff3e0;
   text-shadow: 1px 1px 2px #3e2723;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .contacto {
@@ -78,9 +80,9 @@ header {
 
 .carrusel img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: auto; /* 🔹 Mantiene proporción natural */
   border-radius: 10px;
+  display: block;
 }
 
 @keyframes slide {
@@ -98,14 +100,69 @@ header {
   }
 }
 
-/* ======== CARRUSEL + CARRITO ======== */
+/* ======== CONTENEDOR CARRUSEL + CARRITO ======== */
 .contenedor-carrusel {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 15px;
   gap: 20px;
-  flex-wrap: wrap; /* 🔹 Se adapta en móvil */
+  flex-wrap: wrap;
 }
 
-.
+.carrusel {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* ======== CARRITO ======== */
+#carrito {
+  background: #fff0e0;
+  border: 2px solid #8b4513;
+  padding: 15px;
+  width: 280px;
+  max-width: 100%;
+  overflow-y: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 20px;
+}
+
+#carrito h2 {
+  color: #5a3e2b;
+  margin-bottom: 10px;
+}
+
+#carrito button {
+  width: 100%;
+  background: #8b4513;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#carrito button:hover {
+  background: #a0522d;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.carrito-item button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 3px 7px;
+}
+
+/* ======== FILTROS ======== */
+.fil
