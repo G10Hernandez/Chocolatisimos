@@ -5,14 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chocolatería Artesanal - Tienda Virtual</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Animación del título (reemplazo de marquee) */
+    .titulo-animado {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      animation: desplazamiento 12s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes desplazamiento {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
 </head>
+
 <body>
   <!-- Encabezado -->
   <header>
     <div class="logo">
-      <img src="img/logoC.png" alt="Logo Chocolatería">
-      <marquee><h1>Chocolatería Artesanal "Dulce Cacao"</h1></marquee>
+      <img src="img/logoch.png" alt="Logo Chocolatería" />
+      <h1 class="titulo-animado">Chocolatería Artesanal "Dulce Cacao"</h1>
     </div>
+
     <div class="contacto">
       <p>📞 <span id="telefono">55 1925 9552</span></p>
       <button onclick="enviarPedido()">Enviar pedido por WhatsApp</button>
@@ -25,13 +47,13 @@
     <div class="carrusel">
       <div class="carrusel-inner">
         <div class="carrusel-item active">
-          <img src="img/banner1.jpg" alt="Chocolate artesanal 1">
+          <img src="img/banner1.jpg" alt="Chocolate artesanal 1" />
         </div>
         <div class="carrusel-item">
-          <img src="img/banner2.jpg" alt="Chocolate artesanal 2">
+          <img src="img/banner2.jpg" alt="Chocolate artesanal 2" />
         </div>
         <div class="carrusel-item">
-          <img src="img/banner3.jpg" alt="Chocolate artesanal 3">
+          <img src="img/banner3.jpg" alt="Chocolate artesanal 3" />
         </div>
       </div>
     </div>
