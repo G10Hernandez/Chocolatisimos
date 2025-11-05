@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nombre": "Chocolate Blanco con Almendras",
+    "categoria": "Chocolate Blanco",
+    "precio": 80,
+    "imagen": "img/almemulti.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Chocolate Blanco con Nuez",
+    "categoria": "Chocolate Blanco",
+    "precio": 85,
+    "imagen": "img/nuezbco.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Chocolate Negro con Almendras",
+    "categoria": "Chocolate Negro",
+    "precio": 90,
+    "imagen": "img/almenoscu.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Chocolate Negro con Nuez",
+    "categoria": "Chocolate Negro",
+    "precio": 95,
+    "imagen": "img/nuezoscu.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Trufas de Cacao",
+    "categoria": "Trufas",
+    "precio": 120,
+    "imagen": "img/trufasdiversas.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Bombones Rellenos",
+    "categoria": "Bombones",
+    "precio": 110,
+    "imagen": "img/chocobom.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Muéganos con Chocolate",
+    "categoria": "Especialidades",
+    "precio": 70,
+    "imagen": "img/chocomuegano.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Caja de Chocolates Surtidos",
+    "categoria": "Cajas",
+    "precio": 250,
+    "imagen": "img/chocosurtido.jpg"
+  }
+]
