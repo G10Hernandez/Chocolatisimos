@@ -1,4 +1,4 @@
-/* Reset general */
+/* ======== RESET GENERAL ======== */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +9,10 @@ body {
   font-family: "Segoe UI", sans-serif;
   background: #fff8f3;
   color: #3e2723;
+  line-height: 1.4;
 }
 
-/* Encabezado */
+/* ======== ENCABEZADO ======== */
 header {
   background: #5a3e2b;
   color: white;
@@ -33,12 +34,13 @@ header {
 .logo img {
   height: 60px;
   width: auto;
+  max-width: 100%;
 }
 
 .logo h1 {
   color: #fff3e0;
   text-shadow: 1px 1px 2px #3e2723;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -61,7 +63,7 @@ header {
   background: #a0522d;
 }
 
-/* Carrusel */
+/* ======== CARRUSEL ======== */
 .carrusel {
   width: 100%;
   overflow: hidden;
@@ -81,7 +83,8 @@ header {
 .carrusel img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  max-height: 350px; /* 🔹 Evita imágenes gigantes */
+  object-fit: contain; /* 🔹 Ajusta sin recortar */
   border-radius: 10px;
 }
 
@@ -100,7 +103,7 @@ header {
   }
 }
 
-/* Contenedor carrusel + carrito */
+/* ======== CONTENEDOR CARRUSEL + CARRITO ======== */
 .contenedor-carrusel {
   display: flex;
   justify-content: space-between;
@@ -113,15 +116,16 @@ header {
 .carrusel {
   flex: 1 1 600px;
   margin-right: 20px;
+  min-width: 300px;
 }
 
-/* Carrito */
+/* ======== CARRITO ======== */
 #carrito {
   background: #fff0e0;
   border: 2px solid #8b4513;
   padding: 15px;
   width: 260px;
-  height: 300px;
+  height: auto;
   overflow-y: auto;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -164,7 +168,7 @@ header {
   padding: 3px 7px;
 }
 
-/* Filtros */
+/* ======== FILTROS ======== */
 .filtros {
   padding: 15px;
   text-align: center;
@@ -194,7 +198,7 @@ header {
   color: white;
 }
 
-/* Productos */
+/* ======== PRODUCTOS ======== */
 #productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -217,10 +221,11 @@ header {
 }
 
 .producto img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-height: 180px; /* 🔹 controla el alto máximo */
+  object-fit: contain; /* 🔹 no recorta, ajusta al cuadro */
   border-radius: 10px;
-  height: 150px;
-  object-fit: cover;
 }
 
 .producto button {
@@ -238,7 +243,7 @@ header {
   background: #a0522d;
 }
 
-/* Footer */
+/* ======== FOOTER ======== */
 footer {
   text-align: center;
   padding: 15px;
@@ -247,9 +252,7 @@ footer {
   color: white;
 }
 
-/* ===========================
-   🔸 ADAPTACIÓN RESPONSIVE 🔸
-   =========================== */
+/* ======== ADAPTACIÓN RESPONSIVE ======== */
 @media (max-width: 1024px) {
   header {
     flex-direction: column;
@@ -269,13 +272,12 @@ footer {
   #carrito {
     position: relative;
     width: 100%;
-    height: auto;
     max-width: 500px;
     top: 0;
   }
 
-  .carrusel {
-    margin-right: 0;
+  .carrusel img {
+    max-height: 280px;
   }
 }
 
@@ -292,12 +294,16 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  #carrito {
-    width: 100%;
+  .producto img {
+    max-height: 140px;
   }
 
-  .producto img {
-    height: 120px;
+  .carrusel img {
+    max-height: 200px;
+  }
+
+  #carrito {
+    width: 100%;
   }
 }
 
@@ -312,5 +318,9 @@ footer {
 
   header {
     padding: 10px;
+  }
+
+  .carrusel img {
+    max-height: 180px;
   }
 }
