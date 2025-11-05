@@ -89,8 +89,8 @@ header {
 .carrusel img {
   width: 100%;
   height: auto;
-  max-height: 150px; /* 🔹 Reducido al 50% */
-  object-fit: contain;
+  max-height: 170px; /* 🔹 Reducido al 50% */
+  object-fit: scale-down;
   border-radius: 10px;
 }
 
