@@ -124,9 +124,15 @@ async function enviarPedido() {
   const telefonoCliente = prompt("Por favor, ingresa tu número de teléfono:");
   if (!telefonoCliente || telefonoCliente.trim() === "") {
     alert("Debes ingresar un número válido.");
+  return
+  }
+  
+  const nombreCliente = prompt("Por favor, ingresa tu Nombre Completo:")
+  if (!nombreCliente || nombreCliente.trim() === "") {
+    alert("Debes ingresar un Nombre completo.");
     return;
   }
-
+	
   const metodoPago = prompt("Selecciona tu método de pago:\n1. Efectivo\n2. Transferencia\n3. Tarjeta");
   let metodoTexto = "No especificado";
   if (metodoPago === "1") metodoTexto = "Efectivo";
@@ -139,8 +145,9 @@ async function enviarPedido() {
   });
 
   const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-  mensaje += `%0A*Total:* $${total} MXN`;
+  mensaje += `%0A*Total:* $${total} MXN por 100 grs.`;
   mensaje += `%0A*Teléfono del cliente:* ${telefonoCliente}`;
+  mensaje += `%0A*Nombre del cliente:* ${nombreCliente}`;
   mensaje += `%0A*Método de pago:* ${metodoTexto}`;
 
   const url = `https://wa.me/${telefonoChocolateria}?text=${mensaje}`;
